@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (storedTask) {
         storedTask.forEach((task) => tasks.push(task));
         updatetasksList();
-        updateStats();
+       
     }
 })
 
@@ -18,7 +18,7 @@ const addTask = () => {
     const taskName = document.getElementById('taskname').value.trim();
     const taskDesc = document.getElementById('taskdesc').value.trim();
     const taskDeadline = document.getElementById('taskdeadline').value.trim();
-    // const text = taskinput.value.trim();
+   
 
 
     let inputTask = {
@@ -31,36 +31,21 @@ const addTask = () => {
         tasks.push(inputTask);  // completed : false
         console.log(tasks)
         updatetasksList();
-        updateStats();
         saveTasks();
     }
 };
 
-// const toggleTaskComplete = (index) =>{
-//     tasks[index].completed = !tasks[index].completed
-//     updatetasksList();
-//     updateStats();
-//     saveTasks();
-// }
+const toggleTaskComplete = (index) =>{
+    tasks[index].completed = !tasks[index].completed
+    updatetasksList();
+    saveTasks();
+}
 
 const deleteTask = (index) => {
     tasks.splice(index, 1);
     updatetasksList();
-    updateStats();
     saveTasks();
 };
-
-// const editTask = (index) =>{
-//     const taskinput = document.getElementById('taskinput');
-//     taskinput.value = tasks[index].text;
-
-//     tasks.splice(index, 1);
-//     updatetasksList();
-//     updateStats();
-//     saveTasks();
-// }
-
-
 
 
 const updatetasksList = () => {
@@ -107,11 +92,3 @@ document.getElementById('submit-btn').addEventListener('click', function (e) {
     taskDesc.value = '';
 });
 
-
-const blastconfitti = () => {
-    confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
-    });
-}
