@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (storedTask) {
         storedTask.forEach((task) => tasks.push(task));
         updatetasksList();
-       
+
     }
 })
 
@@ -18,34 +18,50 @@ const addTask = () => {
     const taskName = document.getElementById('taskname').value.trim();
     const taskDesc = document.getElementById('taskdesc').value.trim();
     const taskDeadline = document.getElementById('taskdeadline').value.trim();
-   
 
+    if (taskName == "" || taskDesc == "" || taskDeadline == "") {
+        alert("Please fill in all fields");
+        return;
+    }
 
     let inputTask = {
         taskName: taskName,
         taskDesc: taskDesc,
-        taskDeadline: taskDeadline
+        taskDeadline: taskDeadline,
     };
 
     if (inputTask) {
         tasks.push(inputTask);  // completed : false
-        console.log(tasks)
+        // console.log(tasks)
         updatetasksList();
         saveTasks();
     }
+    document.getElementById('task-form').reset();
 };
 
-const toggleTaskComplete = (index) =>{
+const toggleTaskComplete = (index) => {
     tasks[index].completed = !tasks[index].completed
-    updatetasksList();
+    updatetasksList()
     saveTasks();
 }
 
 const deleteTask = (index) => {
     tasks.splice(index, 1);
     updatetasksList();
+
     saveTasks();
 };
+
+const editTask = (index) => {
+
+    document.getElementById('taskname').value =  tasks[index].taskName; 
+    document.getElementById('taskdesc').value = tasks[index].taskDesc;
+    document.getElementById('taskdeadline').value =  tasks[index].taskDeadline;
+
+    updatetasksList();
+    tasks.splice(index, 1);
+    saveTasks();
+}
 
 
 const updatetasksList = () => {
@@ -68,27 +84,37 @@ const updatetasksList = () => {
                             <p>status: ${task.completed ? 'completed' : 'incomplete'}</p>
                             <span>
                                 <input type="checkbox" ${task.completed ? 'checked' : ''}>
-                                <img onClick="deleteTask(${index}) src="delete_icon.gif" alt="">
+                                <lord-icon
+                                    onClick="editTask(${index})" 
+                                    class="delete_icon"  
+                                    src="https://cdn.lordicon.com/fikcyfpp.json"
+                                    trigger="hover"
+                                    stroke="bold"
+                                    colors="primary:#30c9e8,secondary:#08a88a"
+                                    style="width:23px;height:23px">
+                                </lord-icon>
+                                <lord-icon
+                                    onClick="deleteTask(${index})" 
+                                    class="delete_icon"  
+                                    src="https://cdn.lordicon.com/hwjcdycb.json"
+                                    trigger="hover"
+                                    stroke="bold"
+                                    colors="primary:#30c9e8,secondary:#08a88a"
+                                    style="width:23px;height:23px">
+                                </lord-icon>
                             </span>
                         </div>
                     </div>
                 </div>
         `;
 
-
         createddiv.addEventListener('change', () => toggleTaskComplete(index));
         // console.log(taskList);
-
         taskList.append(createddiv);
     });
 };
 
 document.getElementById('submit-btn').addEventListener('click', function (e) {
     e.preventDefault();
-    
     addTask();
-    taskName.value = '';
-    taskDeadline.value = '';
-    taskDesc.value = '';
 });
-

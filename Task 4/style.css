@@ -51,12 +51,21 @@ section {
     /* background-color: pink; */
 }
 
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3rem;
+    overflow: hidden;
+   
+}
+
 h1 {
     color: var(--text);
     font-size: 2rem;
     margin: 0 auto 0.5rem auto;
 }
-
 
 
 .task {
@@ -188,9 +197,7 @@ input:focus {
     cursor: pointer;
 }
 
-.task-status span img {
-    width: 25px;
-    height: 25px;
-    margin-left: 1rem;
+.task-status span .delete_icon {
+    margin-left: 0.5rem;
     cursor: pointer;
 }
