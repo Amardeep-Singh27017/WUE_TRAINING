@@ -21,7 +21,7 @@ console.log(sum); // Output: 15
 // Using object destructuring to extract values
 const person = { name: 'Ram', age: 30 };
 const { name, age } = person;
-console.log(name, age); // Output: John 30
+console.log(name, age); // Output: Ram 30
 
 
 // Arrow function to add two numbers
