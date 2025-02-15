@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <div class="weather-app">
+        <form class="search-form" action="">
+            <input required class="city-input" type="text" placeholder="Enter the City Name...">
+            <button class="search-btn">
+                <lord-icon src="https://cdn.lordicon.com/wjyqkiew.json" trigger="hover" style="width:25px;height:25px">
+                </lord-icon>
+            </button>
+        </form>
+        <div class="city-date-section">
+            <h2 id="city" class="City">City Name</h2>
+            <p class="date">15 fab 2025</p>
+        </div>
+        <div class="tempeature-info">
+            <p class="description">
+                <span class="material-symbols-outlined sunny">
+                    sunny
+                </span>
+                <span class="weather-desc">weather description</span>
+            </p>
+            <p class="temperature">0°C</p>
+        </div>
+        <div class="additional-info">
+            <div class="wind-info card">
+                <span class="material-symbols-outlined">
+                    air
+                </span>
+                <div>
+                    <h3 class="wind-speed">0 km/h</h3>
+                    <div class="wind-level">wind speed</div>
+                </div>
+            </div>
+
+            <div class="humidity-info card">
+                <span class="material-symbols-outlined">
+                    water_drop
+                </span>
+                <div>
+                    <h3 class="humidity">0 %</h3>
+                    <div class="humidity-level">humidity</div>
+                </div>
+            </div>
+
+            <div class="visivility-info card">
+                <span class="material-symbols-outlined">
+                    visibility
+                </span>
+                <div>
+                    <h3 class="visivility-distance">0 km/h</h3>
+                    <div class="visivility">visibility</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+*{
+   margin: 0;
+   padding: 0;
+   font-family: sans-serif;
+   box-sizing: border-box;
+}
+
+body{
+    background-color: hsl(204,86% , 23%);
+    height: 100%;
+}
+
+.weather-app{
+    background-color: #fff;
+    max-width: 30%;
+    margin: 5rem auto;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.search-form{
+    display: flex;
+    align-items: center;
+}
+
+input[type="text"]{
+    flex: 1;
+    padding: 0.5rem;
+    border-radius: .5rem;
+    border: 2px solid #3498db;
+    font-size: 1rem;
+}
+
+.search-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    padding: 0.4rem;
+    margin-left: .2rem;
+    cursor: pointer;
+    border: none;
+    background-color: #3498db;
+    transition:  background-color .3s ease;
+}
+
+.search-btn:hover{
+    background-color: #0895f4;
+}
+
+.city-date-section{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .4rem;
+}
+.city-date-section h2{
+    font-size: 2rem;
+    opacity: 0.9;
+    margin: 0.2rem;
+}
+.city-date-section .date{
+    background-color: #c3eaf4;
+    padding: .4rem 1.2rem;
+    border-radius: 3rem;
+}
+
+.tempeature-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: .8rem;
+    gap: .4rem;
+    /* background-color: red; */
+}
+
+.tempeature-info .description{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .3rem;
+    font-size: 1.5rem;
+}
+.tempeature-info .description .sunny{
+    font-size: 2rem;
+    opacity: .8rem;
+}
+.tempeature-info .temperature{
+    font-size: 6rem;
+    color: #0895f4;
+    font-weight: bold;
+}
+
+.additional-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 1rem;
+    gap: .5rem;
+}
+.additional-info .card{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: .5rem;
+    background-color: #ecf0f1;
+    padding: 0.5rem;
+    gap: .6rem;
+    box-shadow: rgba(0,0,0,0.24) 0 3px 8px;
+}
+.additional-info .card span{
+    font-size: 3rem;
+    opacity: .8rem;
+}
+.additional-info .card div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
