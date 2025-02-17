@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Club | Find a gym near you</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="head">
+                <h2 class="logo">GymClub</h2>
+                <ul id="list">
+                    <a href="#location">
+                        <li><i class="fas fa-location-dot"></i></li>
+                    </a>
+                    <a href="#members">
+                        <li><i class="fa fa-user"></i></li>
+                    </a>
+                    <a>
+                        <li><i class="fas fa-bars mopenner" id="mopen" onclick="openlist()"></i></li>
+                        <li><i class="fa-solid fa-xmark mopenner" id="mclose" onclick="closelist()"></i></li>
+                    </a>
+                </ul>
+            </div>
+            <i class="fa-solid fa-angle-right left" id="close" onclick="mcloselist()"></i>
+            <i class="fa-solid fa-angle-left left" id="open" onclick="mopenlist()"></i>
+        </nav>
+        <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
+        <div class="sidebaar" id="mlist">
+            <!-- <header>My App</header> -->
+            <ul>
+                <li onclick="closelist()"><a href="#location"><i class="fa-solid fa-qrcode"></i>Find a gym?</a></li>
+                <li onclick="closelist()"><a href="#about"><i class="fa-regular fa-calendar-days"></i></i>Classes</a>
+                </li>
+                <li onclick="closelist()"><a href="#"><i class="fa-solid fa-sliders-h"></i>Services</a></li>
+                <li onclick="closelist()"><a href="#contact"><i class="fa-solid fa-envelope"></i>Contacts</a></li>
+                <li onclick="closelist()"><a href="#about"><i class="fa-solid fa-question-circle"></i>About</a></li>
+            </ul>
+        </div>
+        <!-- -------------------------------------------------------------------------------------------------------------------------------- -->
+
+
+    </header>
+    <!-- ---------------main--------------- -->
+
+    <div class="container">
+        <div class="main_img">
+            <div class="mn_img">
+                <div class="img_cont">
+                    <div>
+                        <p>Welcome to the Gym Group.</p>
+                        <h1>the lowest cost nationwide 24/7 gym</h1>
+                        <button class="btn1">join now</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ------------------------------------------ -->
+        <div class="main_location" id="location">
+            <div class="tagsli">
+                <li><i class="fa-solid fa-dumbbell"></i><span>Top Kit</span></li>
+                <li><i class="fa-solid fa-file-contract"></i><span>No Contract</span></li>
+                <li><i class="fa-solid fa-sack-dollar"></i><span>Low Cost</span></li>
+                <li><i class="fa-solid fa-clock"></i><span>24/7openning</span></li>
+            </div>
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28197.385776296655!2d80.77957934999999!3d27.94266145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399f351b50138a0f%3A0xff6fe2086bfb6c70!2sLakhimpur%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1700330419121!5m2!1sen!2sin"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <div>
+                    <h2 class="h2_heading">Find a gym near you</h2>
+                    <p>With 232 locations to choose from</p>
+                    <button class="btn2">find your gym</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------------------------last para and div------------------------------- -->
+    <div class="about_gym" id="about">
+        <div class="about_cont">
+            <h2 class="h2_heading">About the gym Group</h2>
+            <p>We offer great classes, exercise videos, top kit, flexible memberships & the best personal trainers in a
+                clean & safe environment</p>
+        </div>
+
+        <div class="about_imgs">
+            <div class="img1 img_div">
+                <div>
+                    <img class="images" src="cover/images/img1.jpg" alt="Image loding Error...">
+                </div>
+                <div>
+                    <img class="images" src="cover/images/img2.jpg" alt="Image loding Error...">
+                </div>
+                <div>
+                    <h3>student membership</h3>
+                    <a href="#">Read More</a> <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+
+            <div class="img2 img_div">
+                <div>
+                    <img class="images" src="cover/images/img3.jpg" alt="Image loding Error...">
+                </div>
+                <div>
+                    <img class="images" src="cover/images/img4.jpg" alt="Image loding Error...">
+                </div>
+                <div>
+                    <h3>classes at the gym group</h3>
+                    <a href="#">Read More</a> <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+
+            <div class="img3 img_div">
+                <div>
+                    <img class="images" src="cover/images/img5.jpg" alt="Image loding Error...">
+                </div>
+                <div>
+                    <img class="images" src="cover/images/img6.jpg" alt="Image loding Error...">
+                </div>
+                <div>
+                    <h3>the gym group app</h3>
+                    <a href="#">Read More</a> <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+
+            <div class="img4 img_div">
+                <div>
+                    <img class="images" src="cover/images/img7.jpg" alt="Image loding Error...">
+                </div>
+                <div>
+                    <img class="images" src="cover/images/img8.jpg" alt="Image loding Error...">
+                </div>
+                <div>
+                    <h3>new exercise hub</h3>
+                    <a href="#">Read More</a> <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+
+        </div>
+        <!-- ----------------------------------------------------------------------------------------- -->
+        <div class="last_button" id="members">
+            <button class="btn1">join Now</button>
+        </div>
+        <!-- --------------------------------------members----------------------------------------------------- -->
+        <div class="members">
+            <h4>what our members think</h4>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <i class="fa-solid fa-quote-left fa-xs"></i>
+                <div class="para_div">
+                    <p>It was such a great experience, a lot of like-minded people, supportive and caring. I've learnt a
+                        lot and enjoyed it so much. No other gym I recommend than The Gym Group!</p>
+                </div>
+                <div class="card_mem">
+                    <img src="cover/user.webp" alt="">
+                    <p>Jacky</p>
+                </div>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-quote-left fa-xs"></i>
+                <div class="para_div">
+                    <p>It was such a great experience, a lot of like-minded people, supportive and caring. I've learnt a
+                        lot and enjoyed it so much. No other gym I recommend than The Gym Group!</p>
+                </div>
+                <div class="card_mem">
+                    <img src="cover/user.webp" alt="">
+                    <p>Jacky</p>
+                </div>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-quote-left fa-xs"></i>
+                <div class="para_div">
+                    <p>Going to The Gym Group is like going home - it puts me in a really good headspace.</p>
+                </div>
+                <div class="card_mem">
+                    <img src="cover/user.webp" alt="">
+                    <p>Jacky</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------------------------footer------------------------------- -->
+
+
+    <footer>
+        <div class="footer_cont" id="contact">
+            <h4>get Social</h4>
+            <ul>
+                <div class="links">
+                    <li><a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                </div>
+
+                <div class="links">
+                    <li><a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                </div>
+
+                <div class="links">
+                    <li><a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                </div>
+
+                <div class="links">
+                    <li><a href="https://www.youtube.com/channel/UCDOL99uad_H41nHoxYE_2Fw" target="_blank"><i
+                                class="fa-brands fa-youtube"></i></a></li>
+                </div>
+            </ul>
+
+            <hr class="hr">
+
+            <div class="foot_grid">
+                <div class="item">
+                    <h5>about the gym group</h5>
+                    <p>about us</p>
+                    <p>the gym group's history</p>
+                    <p>awards</p>
+                    <p>press area</p>
+                    <p>contact us</p>
+                </div>
+
+                <div class="item">
+                    <h5>the gyms</h5>
+                    <p>membership rule</p>
+                    <p>classes</p>
+                    <p>personal traning at the gym group</p>
+                    <p>exercise hub</p>
+                    <p>gym opeaning time</p>
+                    <p>gym tour</p>
+                </div>
+
+                <div class="item">
+                    <h5>corporate</h5>
+                    <p>corporate membership</p>
+                    <p>property membership</p>
+                    <p>careers</p>
+                    <p>corporate site</p>
+                    <p>become a personal trainer</p>
+                </div>
+
+                <div class="item">
+                    <h5>legal</h5>
+                    <p>membership agriment</p>
+                    <p>accessibility</p>
+                    <p>health & safety</p> 
+                    <p>legal stuff</p>
+                    <p>privacy & cookie policy</p>
+                    <h5>get the gym group app</h5>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

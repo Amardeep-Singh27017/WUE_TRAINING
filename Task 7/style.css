@@ -1,0 +1,659 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --textcolor: rgb(46, 148, 255);
+}
+
+nav {
+    width: 100vw;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background-color: #132d59c9;
+    z-index: 11;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    height: 34px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 44px;
+    /* color: white; */
+    font-family: Arial, Helvetica, sans-serif;
+    /* -------------------------------------Animation text---------------------------------------- */
+    color: transparent;
+    -webkit-text-stroke: .9px gray;
+}
+
+.logo::first-letter {
+    font-size: 56px;
+    color: rgb(162, 255, 0);
+}
+
+.imglogo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--textcolor);
+}
+
+nav ul li {
+    display: inline;
+    padding: 10px 20px;
+    list-style: none;
+    font-size: 30px;
+    color: white;
+    margin-right: 15px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+/* ------------------------Sidebaar design-------------------------------- */
+
+.mopenner {
+    position: absolute;
+    right: 215px;
+    top: 22px;
+    cursor: pointer;
+}
+
+#mclose {
+    display: none;
+}
+
+.sidebaar ul li {
+    list-style: none;
+}
+
+.sidebaar {
+    position: fixed;
+    top: 74px;
+    right: -250px;
+    width: 250px;
+    /* height: 88%; */
+    /* border-radius: TL TR BR BL; */
+    border-radius: 0px 0px 0px 10px;
+    background-color: #132d59c9;
+    transition: all .5s ease;
+    z-index: 5;
+}
+
+.sidebaar header {
+    text-align: center;
+    font-size: 22px;
+    color: white;
+    line-height: 55px;
+    background: #063146;
+    user-select: none;
+}
+
+.sidebaar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 20px;
+    font-size: 20px;
+    color: white;
+    padding: 30px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    transition: 0.50s;
+}
+
+#mlist ul li:hover a {
+    padding-left: 40px;
+}
+
+.sidebaar ul a i {
+    margin-right: 16px;
+}
+
+/* ------------------------------------------------------------------------------ */
+.main_img {
+    width: 100%;
+    background-color: rgba(147, 143, 196, 0.945);
+}
+
+.mn_img {
+    width: 100%;
+    height: 721px;
+    background-image: url('cover/gym.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.img_cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 596px;
+    background-color: #132d59c9;
+}
+
+.img_cont p {
+    font-size: 14px;
+    margin: 5px 0px 0px 0px;
+    color: #fff;
+}
+
+.img_cont h1 {
+    font-size: 34px;
+    color: #fff;
+    margin: 0;
+}
+
+.btn1 {
+    font-size: 17px;
+    width: 94px;
+    height: 45px;
+    margin: 10px 0px;
+    border-radius: 23px;
+    border: none;
+    outline: none;
+    background-color: rgba(135, 218, 11, 0.945);
+}
+
+.btn1:hover {
+    background-color: rgba(135, 218, 11, 0.627);
+    cursor: pointer;
+}
+
+.tagsli {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 135px;
+}
+
+.tagsli li {
+    display: inline;
+    list-style: none;
+    font-size: 30px;
+    margin: 40px 40px 30px 40px;
+}
+
+.tagsli li i {
+    padding: 0 10px;
+    font-size: 45px;
+}
+
+.map {
+    width: 70%;
+    margin: 27px auto;
+    outline: 1px solid black;
+    text-align: center;
+    border-radius: 10px;
+}
+
+iframe {
+    border-radius: 10px;
+}
+
+.h2_heading {
+    font-size: 1.7rem;
+    color: var(--textcolor);
+    margin: 15px;
+}
+
+.map p {
+    font-size: 15px;
+    color: #0e0066;
+    margin: 10px;
+}
+
+.map .btn2 {
+    width: 149px;
+    height: 40px;
+    padding: 0px;
+    font-size: 15px;
+    margin: 17px 0 28px 0;
+    border-radius: 30px;
+    border: 2px solid black;
+}
+
+.map .btn2:hover {
+    cursor: pointer;
+    background-color: #0e0066;
+    color: #fff;
+}
+
+/* -----------------------------about gym----------------------- */
+.about_gym {
+    width: 85%;
+    margin: auto;
+}
+
+.about_cont {
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.about_cont p {
+    color: #0e0066;
+    font-size: 1.2rem;
+    font-family: thegymgroupsans-Bold;
+    font-weight: normal;
+    line-height: 1.8rem;
+    letter-spacing: 0;
+
+}
+
+.img_div {
+    width: 312px;
+    margin: 5px;
+}
+
+.img_div h3 {
+    font-size: 1.4rem;
+    color: var(--textcolor);
+    margin: 5px 0;
+}
+
+.about_imgs .images {
+    margin-bottom: 5px;
+    width: 312px;
+    height: 235px;
+    border-radius: 8px;
+    outline: 1px solid gray;
+}
+
+.about_imgs {
+    display: grid;
+    justify-content: center;
+    grid-template-areas: "I1 I2 I3 I4";
+
+}
+
+.img1 {
+    grid-area: I1;
+}
+
+.img2 {
+    grid-area: I2;
+}
+
+.img3 {
+    grid-area: I3;
+}
+
+.img4 {
+    grid-area: I4;
+}
+
+
+/* --------------------------------------------------------------------------------------------------- */
+
+.last_button {
+    width: 100%;
+    margin: 40px 0 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.members h4 {
+    font-size: 1.4rem;
+    text-align: center;
+    color: var(--textcolor);
+}
+
+.cards {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.card {
+    width: 380px;
+    /* min-height: 383px; */
+    max-height: 383px;
+    border-radius: 8px 8px 0.8rem 0.8rem;
+    box-shadow: 0px 1px 7px 0px gray;
+}
+
+.card i {
+    font-size: 50px;
+    margin: 40px 0px 0px 20px;
+    color: rgba(46, 147, 255, 0.771);
+}
+
+.card p {
+    word-wrap: break-word;
+    margin: 0px 8px 0px 20px;
+    font-size: 1.2rem;
+    font-family: thegymgroupsans-Bold;
+    font-weight: normal;
+    line-height: 1.5rem;
+    letter-spacing: 0;
+}
+
+.card_mem {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    background-color: rgb(238, 243, 249);
+    border-radius: 0px 0px 0.8rem 0.8rem;
+}
+
+.card_mem img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: black;
+    border: 3px solid black;
+    box-shadow: 0px 1px 7px 0px gray;
+}
+
+.card_mem p {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin-left: 10px;
+}
+
+.para_div {
+    width: 100%;
+    min-height: 155px;
+    max-height: 155px;
+    overflow: hidden;
+}
+
+footer {
+    width: 100%;
+    height: 444px;
+    background-color: rgb(229, 239, 250);
+    margin-top: 50px;
+    padding-bottom: 40px;
+}
+
+.footer_cont {
+    width: 85%;
+    margin: auto;
+    padding-top: 70px;
+}
+
+.footer_cont h4 {
+    font-size: 18px;
+    color: #0e0066;
+    margin: 0 0 0 8px;
+}
+
+.footer_cont ul li {
+    list-style: none;
+    outline: none;
+    border: none;
+}
+
+.footer_cont ul li a {
+    text-decoration: none;
+}
+
+.footer_cont ul li a i {
+    font-size: 23px;
+    color: #fff;
+}
+
+.footer_cont ul {
+    display: flex;
+}
+
+.footer_cont .links {
+    width: 43px;
+    height: 43px;
+    background-color: var(--textcolor);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 30px 30px 8px;
+}
+
+.foot_grid {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.item {
+    width: 300px;
+    padding: 2px;
+}
+
+.item h5 {
+    font-size: 18px;
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+.item p {
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+
+/* ----------------------------------------------Responsive------------------------------------------- */
+
+nav .left {
+    display: none;
+    font-size: 23px;
+    margin-right: 23px;
+    color: white;
+    cursor: pointer;
+    transition: all 2s;
+}
+
+@media only screen and (max-width: 700px) {
+    .mopenner {
+        position: absolute;
+        right: 15px;
+        top: 2px;
+        cursor: pointer;
+    }
+
+    /* ----------------------------------------------------- */
+    .logo {
+        width: 189px;
+        font-size: 23px;
+        margin-left: -24px;
+    }
+
+    .logo::first-letter {
+        font-size: 33px;
+    }
+
+    nav ul {
+        position: absolute;
+        right: -144px;
+        top: 22px;
+        transition: all 1s;
+    }
+
+    nav ul li {
+        display: inline;
+        padding: 2px 5px;
+        list-style: none;
+        font-size: 25px;
+        color: white;
+    }
+
+    nav .left {
+        display: block;
+        position: absolute;
+        right: 6px;
+    }
+
+    nav #close {
+        display: none;
+    }
+
+
+    .about_imgs {
+        display: grid;
+        justify-content: center;
+        grid-template-areas:
+            "I1"
+            "I2"
+            "I3"
+            "I4";
+    }
+
+    .about_imgs .images {
+        margin-top: 40px;
+    }
+
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 318px;
+    }
+
+    /* ----------------------------------------------------responsiv--------------- */
+
+    .sidebaar {
+        height: 88%;
+    }
+
+    .img_cont h1 {
+        font-size: 20px;
+        color: #fff;
+        margin-top: 3px;
+    }
+
+    .img_cont .btn1 {
+        font-size: 15px;
+        width: 90px;
+        height: 40px;
+        margin: 10px 0px;
+
+    }
+
+    .tagsli {
+        height: 50px;
+    }
+
+    .tagsli li {
+        display: inline;
+        list-style: none;
+        font-size: 13px;
+        margin: 14px 4px 13px 4px;
+    }
+
+    .tagsli li i {
+        padding: 0 1px;
+        font-size: 18px;
+
+    }
+
+
+    .map {
+        width: 95%;
+
+    }
+
+    .about_cont {
+        width: 93%;
+    }
+
+    .about_cont p {
+        font-size: 1.1rem;
+    }
+
+    footer {
+        height: 460px;
+    }
+
+    .footer_cont {
+        width: 90%;
+        margin: auto;
+        padding-top: 70px;
+    }
+
+
+    .footer_cont h4 {
+        font-size: 28px;
+        margin: 0 0 0 8px;
+    }
+
+    .item {
+        width: 95%;
+        padding: 2px;
+    }
+
+    .item h5 {
+        font-size: 14px;
+        margin-top: 30px;
+        font-weight: 600;
+    }
+
+    .item p {
+        font-size: 10px;
+        margin-top: 20px;
+    }
+
+    .card_mem p {
+        font-size: 18px;
+    }
+
+    .card_mem img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .tagsli {
+        gap: 53px;
+        padding: 5px 0;
+        margin-top: 8px;
+    }
+
+    .tagsli li span {
+        display: none;
+    }
+
+    .tagsli li i {
+        font-size: 30px;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 6px;
+    border: 3px solid #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 6px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+  
