@@ -1,0 +1,11 @@
+.card_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.card{
+    border: 2px solid black;
+    margin: 34px;
+    padding: 10px;
+    border-radius: 5px;
+}
